@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+ import React from 'react';
 import './App.css';
-
+import quoteData from './data';
+ let newQuote
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  const[generatedQuote,setgeneratedQuote] = React.useState("Love your family, work super hard, and live your passion. -Gary Vaynerchuk")
+  function generateQuote (){
+    const quoteArray = quoteData
+    const randomNum = Math.floor(Math.random() * quoteArray.length)
+    newQuote = quoteArray[randomNum]
+    setgeneratedQuote(newQuote)
+
+  }
+    return (
+    <div className="app">
+       <div className='container'>
+       <div className='circle'></div>
+        <h2 className='head'>QUOTES </h2>
+        <p className='quote'>{generatedQuote}</p>
+        <button className='button' onClick={generateQuote}>New Quote</button>
+       </div>
     </div>
   );
 }

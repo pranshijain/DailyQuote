@@ -1,38 +1,75 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.app {
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+  height: 100%;
+  width: 600px;
+  background-color: rgb(20, 52, 168);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  border-radius: 50px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15);
+  flex-direction: column;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.head {
+  font-size: 40px;
+  color: rgb(249, 252, 255);
+}
+
+.button {
+  padding: 12px;
+  background-color: rgb(238, 235, 245);
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+  font-size: 20px;
+  font-weight: 200;
+  color: rgb(7, 62, 110);
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+
+}
+
+.button:active {
+  background-color: #a7ccf3;
+}
+
+.quote {
+  color: rgb(250, 249, 251);
+  font-size: 22px;
+  font-style: oblique;
+  /* margin-top: 50px ; */
+  margin-bottom: 50px;
+
+}
+
+@media (max-width :600px) {
+  body {
+    background-image: url('./pin.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* Optional: This keeps the background fixed when scrolling */
+    background-position: center center;
+    padding-bottom: 40px;
+   }
+
+  .container {
+    padding: 15px 50px;
+    width: 190px;
+    background-color: rgb(249, 67, 185);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15);
+    flex-direction: column;
   }
 }
